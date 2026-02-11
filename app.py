@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template, redirect, flash
-from flask_mail import Mail, Message
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
 import sqlite3
 import os
 
@@ -79,42 +80,36 @@ def contact():
         # Send email to YOU
         
         try:
-            msg = Message(
-            subject="New Contact Form Submission",
-            sender=app.config['MAIL_USERNAME'],
-            recipients=[app.config['MAIL_USERNAME']]
-            )
-            msg.body = f"""
-            New message received:
+             sg = SendGridAPIClient(os.getenv("SENDGRID_API_KEY"))
 
-            Name: {name}
-            Email: {email}
-            Message: {message}
-            """
-            mail.send(msg)
+    # Email to YOU
+             admin_email = Mail(
+                 from_email='your_verified_email@example.com',
+                 to_emails='your_verified_email@example.com',
+                 subject='New Contact Form Submission',
+                 plain_text_content=f"""
+                 Name: {name}
+                 Email: {email}
+                 Message: {message}
+                 """
+             )
+             sg.send(admin_email)
 
-            # Send confirmation email to USER
-            confirm = Message(
-                subject="Thanks for contacting Pranjal Sharma",
-                sender=app.config['MAIL_USERNAME'],
-                recipients=[email]
-            )
-            confirm.body = f"""
-            Hi {name},
+             # Confirmation to USER
+             user_email = Mail(
+                 from_email='your_verified_email@example.com',
+                 to_emails=email,
+                 subject='Thanks for contacting Pranjal Sharma',
+                 plain_text_content=f"""
+                 Hi {name},
+                  Thank you for reaching out! 🚀
+                 I’ve received your message and will get back to you soon.
 
-            Thank you for reaching out to Pranjal Sharma’s Portfolio 🚀  
-
-            Your message has been received successfully. I appreciate your interest and will carefully review your inquiry.
-            I aim to respond at the earliest possible time.
-
-            I look forward to connecting and exploring potential opportunities together.
-
-            Best regards,  
-            Pranjal Sharma  
-            DevOps | Cloud | Automation ☁️
-
-            """
-            mail.send(confirm)
+                 Best regards,
+                 Pranjal Sharma
+                 """
+             )
+             sg.send(user_email)
             
         except Exception as e:
             print("Email Sending Failed!!")
