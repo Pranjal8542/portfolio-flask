@@ -97,7 +97,7 @@ def contact():
 
              # Confirmation to USER
              user_email = Mail(
-                 from_email='your_verified_email@example.com',
+                 from_email='pranjalsharma6397p@gmail.com',
                  to_emails=email,
                  subject='Thanks for contacting Pranjal Sharma',
                  plain_text_content=f"""
