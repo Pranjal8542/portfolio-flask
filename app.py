@@ -84,8 +84,8 @@ def contact():
 
     # Email to YOU
              admin_email = Mail(
-                 from_email='your_verified_email@example.com',
-                 to_emails='your_verified_email@example.com',
+                 from_email='pranjalsharma6397p@gmail.com',
+                 to_emails='pranjalsharma6397p@gmail.com',
                  subject='New Contact Form Submission',
                  plain_text_content=f"""
                  Name: {name}
