@@ -77,43 +77,48 @@ def contact():
         conn.close()
 
         # Send email to YOU
-        msg = Message(
+        
+        try:
+            msg = Message(
             subject="New Contact Form Submission",
             sender=app.config['MAIL_USERNAME'],
             recipients=[app.config['MAIL_USERNAME']]
-        )
-        msg.body = f"""
-        New message received:
+            )
+            msg.body = f"""
+            New message received:
 
-        Name: {name}
-        Email: {email}
-        Message: {message}
-        """
-        mail.send(msg)
+            Name: {name}
+            Email: {email}
+            Message: {message}
+            """
+            mail.send(msg)
 
-        # Send confirmation email to USER
-        confirm = Message(
-            subject="Thanks for contacting Pranjal Sharma",
-            sender=app.config['MAIL_USERNAME'],
-            recipients=[email]
-        )
-        confirm.body = f"""
-        Hi {name},
+            # Send confirmation email to USER
+            confirm = Message(
+                subject="Thanks for contacting Pranjal Sharma",
+                sender=app.config['MAIL_USERNAME'],
+                recipients=[email]
+            )
+            confirm.body = f"""
+            Hi {name},
 
-        Thank you for reaching out to Pranjal Sharma’s Portfolio 🚀  
+            Thank you for reaching out to Pranjal Sharma’s Portfolio 🚀  
 
-        Your message has been received successfully. I appreciate your interest and will carefully review your inquiry.
-        I aim to respond at the earliest possible time.
+            Your message has been received successfully. I appreciate your interest and will carefully review your inquiry.
+            I aim to respond at the earliest possible time.
+
+            I look forward to connecting and exploring potential opportunities together.
+
+            Best regards,  
+            Pranjal Sharma  
+            DevOps | Cloud | Automation ☁️
+
+            """
+            mail.send(confirm)
+            
+        except Exception as e:
+            print("Email Sending Failed!!")
         
-        I look forward to connecting and exploring potential opportunities together.
-        
-        Best regards,  
-        Pranjal Sharma  
-        DevOps | Cloud | Automation ☁️
-
-        """
-        mail.send(confirm)
-
         flash("Message sent successfully!")
         return redirect("/contact")
 
