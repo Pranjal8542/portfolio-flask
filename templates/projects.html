@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+
+<section class="projects-section">
+    <div class="container">
+
+        <!-- Section Header -->
+        <div class="section-header text-center">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-subtitle">
+                Hands-on projects, labs, and learning implementations
+            </p>
+        </div>
+
+        <div class="row mt-5 g-4">
+
+            <!-- Project 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card">
+                    <span class="project-type">Security Lab</span>
+                    <h4>Wazuh SIEM – SOC Home Lab</h4>
+                    <p>
+                        Configured Wazuh Manager and Agent to perform centralized
+                        log monitoring and security alert analysis in a lab environment.
+                    </p>
+
+                    <ul class="project-points">
+                        <li>Monitored system logs and security events</li>
+                        <li>Analyzed alerts for suspicious activity</li>
+                        <li>Understood SOC workflows and monitoring concepts</li>
+                    </ul>
+
+                    <div class="project-tags">
+                        <span>Wazuh</span>
+                        <span>Linux</span>
+                        <span>SIEM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card">
+                    <span class="project-type">Networking Lab</span>
+                    <h4>Network Traffic Analysis – Wireshark</h4>
+                    <p>
+                        Captured and analyzed network packets to study traffic behavior
+                        and understand network protocols.
+                    </p>
+
+                    <ul class="project-points">
+                        <li>Analyzed TCP/IP, DNS, and HTTP traffic</li>
+                        <li>Identified suspicious IP activity</li>
+                        <li>Learned packet-level troubleshooting</li>
+                    </ul>
+
+                    <div class="project-tags">
+                        <span>Wireshark</span>
+                        <span>Networking</span>
+                        <span>TCP/IP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card">
+                    <span class="project-type">Web Application</span>
+                    <h4>Flask Portfolio Website</h4>
+                    <p>
+                        Developed a multi-page portfolio website using Flask,
+                        Bootstrap, and custom CSS with modular templates.
+                    </p>
+
+                    <ul class="project-points">
+                        <li>Implemented Flask routing and Jinja templates</li>
+                        <li>Designed responsive UI with Bootstrap</li>
+                        <li>Structured code for scalability</li>
+                    </ul>
+
+                    <div class="project-tags">
+                        <span>Flask</span>
+                        <span>Bootstrap</span>
+                        <span>HTML/CSS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card">
+                    <span class="project-type">System Practice</span>
+                    <h4>Linux Practice & Automation Lab</h4>
+                    <p>
+                        Practiced Linux system administration tasks and basic
+                        automation concepts in a local lab setup.
+                    </p>
+
+                    <ul class="project-points">
+                        <li>User & permission management</li>
+                        <li>Process and file system monitoring</li>
+                        <li>Basic shell scripting practice</li>
+                    </ul>
+
+                    <div class="project-tags">
+                        <span>Linux</span>
+                        <span>Shell</span>
+                        <span>System Admin</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card">
+                    <span class="project-type">Mobile App</span>
+                    <h4>E-Commerce Android Application</h4>
+                    <p>
+                        Built an Android-based e-commerce application with
+                        authentication, product management, and payment integration.
+                    </p>
+
+                    <ul class="project-points">
+                        <li>User authentication & product listing</li>
+                        <li>Cart and checkout workflow</li>
+                        <li>Integrated Firebase and Razorpay API</li>
+                    </ul>
+
+                    <div class="project-tags">
+                        <span>Android</span>
+                        <span>Firebase</span>
+                        <span>API</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card">
+                    <h4>Online Book Store</h4>
+
+                    <p>
+                        Developed a responsive online book store web application that allows
+                        users to browse books, filter by categories, and manage a shopping cart
+                        with smooth client-side interactions.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Frontend</span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

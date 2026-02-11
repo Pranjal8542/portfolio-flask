@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<section class="hero-section d-flex align-items-center">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- LEFT CONTENT -->
+            <div class="col-lg-6 text-center text-lg-start hero-text">
+
+                <span class="hero-badge">
+                    MCA Graduate · Engineering Intern
+                </span>
+
+                <h1 class="hero-title mt-3">
+                    Hi, I'm <span class="highlight">Pranjal Sharma</span>
+                </h1>
+
+                <h2 class="hero-role">
+                    Aspiring DevOps & Cloud Engineer
+                </h2>
+
+                <p class="hero-description">
+                    I am an MCA graduate with hands-on internship experience in frontend
+                    development and cloud-based application testing. I enjoy working with
+                    Linux systems, automation, CI/CD fundamentals, and learning how modern
+                    infrastructure and DevOps practices work in real-world environments.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="{{ url_for('projects') }}" class="btn btn-primary me-3">
+                        View Projects
+                    </a>
+                    <a href="{{ url_for('contact') }}" class="btn btn-outline-info">
+                        Contact Me
+                    </a>
+                </div>
+
+                <!-- Quick highlights -->
+                <div class="hero-highlights">
+                    <span>Linux</span>
+                    <span>CI/CD</span>
+                    <span>Docker (Basics)</span>
+                    <span>Wazuh SIEM</span>
+                    <span>Cloud Fundamentals</span>
+                </div>
+
+            </div>
+
+            <!-- RIGHT VISUAL -->
+            <div class="col-lg-6 text-center mt-5 mt-lg-0 hero-visual">
+
+                <div class="profile-wrapper">
+                    <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Pranjal Sharma"
+                        class="profile-image">
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-down">
+            <span></span>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+
+<section class="contact-creative">
+    <div class="container">
+        <div class="row align-items-center min-vh-100">
+
+            <!-- LEFT: LAMP -->
+            <div class="col-md-5 text-center mb-5 mb-md-0">
+                <div class="lamp-wrapper">
+                    <div id="lamp" class="lamp off">
+                        <div class="lamp-wire"></div>
+                        <div class="lamp-head"></div>
+                        <div class="lamp-light"></div>
+                    </div>
+                    <p class="lamp-text">
+                        Click Here to connect with me !!
+                    </p>
+                </div>
+            </div>
+
+            <!-- RIGHT: CONTACT FORM -->
+            <div class="col-md-7">
+                <div id="contactFormBox" class="contact-form-box hidden">
+                    <h3>Let’s Connect</h3>
+                    <p class="form-subtitle">
+                        Open to internships, collaboration, and learning opportunities
+                    </p>
+
+                    <!-- Flash Message -->
+                    {% with messages = get_flashed_messages() %}
+                      {% if messages %}
+                        <div class="alert alert-success">
+                            {{ messages[0] }}
+                        </div>
+                      {% endif %}
+                    {% endwith %}
+
+                    <!-- WORKING FORM -->
+                    <form method="POST" action="{{ url_for('contact') }}">
+
+                        <div class="mb-3">
+                            <input type="text"
+                                   name="name"
+                                   class="form-control custom-input"
+                                   placeholder="Your Name"
+                                   required>
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="email"
+                                   name="email"
+                                   class="form-control custom-input"
+                                   placeholder="Your Email"
+                                   required>
+                        </div>
+
+                        <div class="mb-3">
+                            <textarea rows="4"
+                                      name="message"
+                                      class="form-control custom-input"
+                                      placeholder="Your Message"
+                                      required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-info w-100">
+                            Send Message
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

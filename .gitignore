@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+contacts.db
+instance/
+.env/
+venv/
+.env.local
+

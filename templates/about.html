@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+
+{% block content %}
+
+<section class="about-section">
+    <div class="container">
+
+        <!-- Section Header -->
+        <div class="section-header text-center">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">
+                DevOps-focused learner with a strong engineering foundation
+            </p>
+        </div>
+
+        <!-- ABOUT + SKILLS -->
+        <div class="row mt-5 align-items-stretch">
+
+            <!-- ABOUT CARD -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="about-card h-100">
+                    <h3>
+                        Hello, I'm <span class="highlight">Pranjal Sharma</span>
+                    </h3>
+
+                    <p>
+                        I am an MCA graduate with a strong foundation in computer applications,
+                        systems, and software development. I have hands-on internship experience
+                        in frontend development and cloud-based application testing, along with
+                        practical exposure to DevOps and system monitoring concepts.
+                    </p>
+
+                    <p>
+                        I have worked with Linux systems, Git-based workflows, CI/CD fundamentals,
+                        Docker basics, networking concepts, and security monitoring tools like
+                        Wazuh. I believe in learning by building, taking ownership of tasks,
+                        and improving continuously through real-world practice.
+                    </p>
+
+                    <p class="about-focus">
+                        Currently focused on DevOps, cloud fundamentals, and system reliability.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SKILLS CARD -->
+            <div class="col-lg-6">
+                <div class="skills-card h-100">
+                    <h4>Technical Skills</h4>
+
+                    <div class="skill-group">
+                        <h6 class="skill-title">Core Systems & DevOps</h6>
+                        <div class="skills-grid">
+                            <span class="skill-badge">Linux (Commands, Permissions)</span>
+                            <span class="skill-badge">Git & GitHub (Basic)</span>
+                            <span class="skill-badge">CI/CD Fundamentals</span>
+                            <span class="skill-badge">Docker (Basics)</span>
+                            <span class="skill-badge">Networking Basics (TCP/IP, DNS)</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <h6 class="skill-title">Programming & Web</h6>
+                        <div class="skills-grid">
+                            <span class="skill-badge">Python (Basic)</span>
+                            <span class="skill-badge">Shell Scripting (Basic)</span>
+                            <span class="skill-badge">Flask (Basic)</span>
+                            <span class="skill-badge">HTML, CSS, JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <h6 class="skill-title">Databases</h6>
+                        <div class="skills-grid">
+                            <span class="skill-badge">MySQL</span>
+                            <span class="skill-badge">MongoDB (Basic)</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <h6 class="skill-title">Tools & Labs</h6>
+                        <div class="skills-grid">
+                            <span class="skill-badge">Wazuh SIEM (Lab)</span>
+                            <span class="skill-badge">Wireshark (Packet Analysis)</span>
+                            <span class="skill-badge">Cloud Fundamentals</span>
+                            <span class="skill-badge">Microservices (Learning)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="education-card">
+                    <h4 class="mb-4">Education</h4>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-content">
+                                <h5>Master of Computer Applications (MCA)</h5>
+                                <p>Graphic Era Hill University, Bheemtal</p>
+                                <span class="timeline-year">2023 – 2025</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-content">
+                                <h5>Bachelor of Computer Applications (BCA)</h5>
+                                <p>Droan College of Education & Technology</p>
+                                <span class="timeline-year">2020 – 2023</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-content">
+                                <h5>Senior Secondary (12th)</h5>
+                                <p>Aditya Nath Jha Govt. Inter College</p>
+                                <span class="timeline-year">2020</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXPERIENCE -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="experience-card">
+                    <h4 class="mb-4">Experience</h4>
+
+                    <div class="experience-item">
+                        <h5>Frontend Developer Intern</h5>
+                        <span class="experience-org">
+                            Zanthium Technosoft Pvt. Ltd · Mar 2025 – May 2025
+                        </span>
+                        <ul>
+                            <li>Built and maintained responsive UI using HTML, CSS, and JavaScript.</li>
+                            <li>Resolved UI and functional bugs during testing cycles.</li>
+                            <li>Worked with APIs and backend integration.</li>
+                            <li>Ensured cross-browser compatibility.</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <h5>Cloud Computing Junior Analyst (Intern)</h5>
+                        <span class="experience-org">
+                            Prash Enterprises · Sep 2024 – Dec 2024
+                        </span>
+                        <ul>
+                            <li>Tested cloud-based applications for functionality and performance.</li>
+                            <li>Identified and tracked bugs to improve stability.</li>
+                            <li>Performed basic troubleshooting and documentation.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
